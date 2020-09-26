@@ -103,3 +103,11 @@ def test_avg_removes_lower_outliers():
     res = c.avg([2, 5, 12, 98], lt=10)
 
     assert res == pytest.approx(55)
+
+
+def test_avg_upper_threshold_is_included():
+    c = Calc()
+
+    res = c.avg([2, 5, 12, 98], ut=98)
+
+    assert res == pytest.approx(29.25)
