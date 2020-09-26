@@ -13,4 +13,11 @@ class Calc:
         return reduce(lambda x, y: x * y, args)
 
     def div(self, a, b):
-        return a / b
+        # if not b:
+        #     return "inf"
+        # return a / b
+
+        try:
+            return a / b
+        except ZeroDivisionError:
+            return "inf"
