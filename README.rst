@@ -36,9 +36,9 @@ TDD Rules
 Run Tests
 --------
 
-```bash
-py.test -svv
-```
+    ``bash
+    py.test -svv
+    ``
 
 Credits
 ---------
