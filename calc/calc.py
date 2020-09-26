@@ -27,10 +27,10 @@ class Calc:
     def avg(self, it, ut=None, lt=None):
         _it = it[:]
 
-        if lt:
+        if lt is not None:
             _it = [x for x in _it if x >= lt]
 
-        if ut:
+        if ut is not None:
             _it = [x for x in _it if x <= ut]
 
         if not len(_it):
